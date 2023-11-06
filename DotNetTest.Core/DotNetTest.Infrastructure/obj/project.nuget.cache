@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sxvmCw2ddNCnGj8oPT8/V1NT1jhvKDpTaeEpkFbEKqGhsBoGvzxs7eCg97GDty9/P8rCkqniCxN3bD89Y6mfQQ==",
+  "success": true,
+  "projectFilePath": "/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Infrastructure/DotNetTest.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/home/kpshf-pc/.nuget/packages/dapper/2.1.15/dapper.2.1.15.nupkg.sha512"
+  ],
+  "logs": []
+}

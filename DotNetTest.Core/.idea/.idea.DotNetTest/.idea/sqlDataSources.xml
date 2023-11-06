@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="ef2d6031-9ea6-4eca-b2b9-610c529931fc" />
+          <option name="name" value="DevLab@localhost (DDL)" />
+          <option name="dbmsName" value="MSSQL" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/dbo/CatProductos.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/dbo/CatTipoCliente.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/dbo/TbIClientes.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/dbo/TbIDetallesFactura.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/dbo/TbIFacturas.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/CatProductos.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/CatTipoCliente.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIClientes.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIDetallesFactura.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIFacturas.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/CatProductos.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/CatTipoCliente.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIClientes.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIDetallesFactura.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIFacturas.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script" />
+            </array>
+          </option>
+          <option name="outPath" value="$PROJECT_DIR$/../DotNetTest.Script" />
+          <option name="outLayout" value="File per object by schema and database.groovy" />
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

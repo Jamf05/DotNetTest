@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QJxTnWv1785HyZFEQItVwoystY+LGQL6135+M1AnvSY=",
+  "Source": "DotNetTest.Api",
+  "BasePath": "_content/DotNetTest.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,12 @@
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/bin/Debug/net6.0/DotNetTest.Domain.deps.json
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/bin/Debug/net6.0/DotNetTest.Domain.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/bin/Debug/net6.0/DotNetTest.Domain.pdb
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.csproj.AssemblyReference.cache
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.AssemblyInfoInputs.cache
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.AssemblyInfo.cs
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.csproj.CoreCompileInputs.cache
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/refint/DotNetTest.Domain.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.pdb
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/dvp_dot_net_test/DotNetTest.Domain/obj/Debug/net6.0/ref/DotNetTest.Domain.dll

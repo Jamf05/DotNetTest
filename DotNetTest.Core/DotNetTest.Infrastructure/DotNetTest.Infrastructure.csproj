@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+      <Reference Include="Autofac">
+        <HintPath>..\..\..\..\..\..\..\home\kpshf-pc\.nuget\packages\autofac\6.4.0\lib\net6.0\Autofac.dll</HintPath>
+      </Reference>
+      <Reference Include="Autofac.Extensions.DependencyInjection">
+        <HintPath>..\..\..\..\..\..\..\home\kpshf-pc\.nuget\packages\autofac.extensions.dependencyinjection\8.0.0\lib\net6.0\Autofac.Extensions.DependencyInjection.dll</HintPath>
+      </Reference>
+      <Reference Include="MediatR">
+        <HintPath>..\..\..\..\..\..\..\home\kpshf-pc\.nuget\packages\mediatr\12.1.1\lib\net6.0\MediatR.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+        <HintPath>..\..\..\..\..\..\..\home\kpshf-pc\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\7.0.0\lib\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\DotNetTest.Domain\DotNetTest.Domain.csproj" />
+    </ItemGroup>
+
+
+
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.1.15" />
+    </ItemGroup>
+
+
+
+
+
+</Project>

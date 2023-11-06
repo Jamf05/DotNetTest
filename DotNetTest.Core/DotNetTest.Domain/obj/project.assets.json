@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net6.0": []
+  },
+  "packageFolders": {
+    "/home/kpshf-pc/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/DotNetTest.Domain.csproj",
+      "projectName": "DotNetTest.Domain",
+      "projectPath": "/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/DotNetTest.Domain.csproj",
+      "packagesPath": "/home/kpshf-pc/.nuget/packages/",
+      "outputPath": "/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/kpshf-pc/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/home/kpshf-pc/.dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetTest.Api", "DotNetTest.Api\DotNetTest.Api.csproj", "{66324569-88F1-46B5-9E61-03B5B1DB2C25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetTest.Domain", "DotNetTest.Domain\DotNetTest.Domain.csproj", "{CC1C0B44-3675-4664-8C6E-F1D488D53C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetTest.Infrastructure", "DotNetTest.Infrastructure\DotNetTest.Infrastructure.csproj", "{AA8808EB-135F-4815-9D01-3AA792E82140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66324569-88F1-46B5-9E61-03B5B1DB2C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66324569-88F1-46B5-9E61-03B5B1DB2C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66324569-88F1-46B5-9E61-03B5B1DB2C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66324569-88F1-46B5-9E61-03B5B1DB2C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC1C0B44-3675-4664-8C6E-F1D488D53C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1C0B44-3675-4664-8C6E-F1D488D53C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1C0B44-3675-4664-8C6E-F1D488D53C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1C0B44-3675-4664-8C6E-F1D488D53C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8808EB-135F-4815-9D01-3AA792E82140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8808EB-135F-4815-9D01-3AA792E82140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8808EB-135F-4815-9D01-3AA792E82140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8808EB-135F-4815-9D01-3AA792E82140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

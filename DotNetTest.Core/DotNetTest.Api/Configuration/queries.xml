@@ -1,0 +1,54 @@
+<data>
+    <query name="get-product-by-id">
+        <sql>
+            SELECT
+            p.Id as Id,
+            p.NombreProducto as ProductName,
+            p.ImagenProducto as ImageProduct,
+            p.PrecioUnitario as UnitPrice,
+            p.ext as Ext
+            FROM CatProductos p
+            WHERE p.Id = @Id
+        </sql>
+    </query>
+
+    <query name="get-product-list">
+        <sql>
+            SELECT
+            p.Id as Id,
+            p.NombreProducto as ProductName,
+            p.ImagenProducto as ImageProduct,
+            p.PrecioUnitario as UnitPrice,
+            p.ext as Ext
+            FROM CatProductos p;
+        </sql>
+    </query>
+
+    <query name="get-client-by-id">
+        <sql>
+            SELECT
+            c.id as Id,
+            c.RazonSocial as BusinessName,
+            c.IdTipoCliente as ClientTypeId,
+            c.FechaCreacion as CreationDate,
+            c.RFC as Rfc,
+            ct.ID as Id,
+            ct.TipoCliente as Type
+            FROM TbIClientes c
+            JOIN CatTipoCliente ct ON c.IdTipoCliente = ct.ID
+            WHERE c.id = @ClientId
+        </sql>
+    </query>
+
+    <query name="get-client-list">
+        <sql>
+            SELECT
+            p.Id as Id,
+            p.NombreProducto as ProductName,
+            p.ImagenProducto as ImageProduct,
+            p.PrecioUnitario as UnitPrice,
+            p.ext as Ext
+            FROM CatProductos p;
+        </sql>
+    </query>
+</data>
