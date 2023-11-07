@@ -22,3 +22,6 @@
 /mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/obj/Debug/net6.0/refint/DotNetTest.Domain.dll
 /mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.pdb
 /mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/obj/Debug/net6.0/ref/DotNetTest.Domain.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/bin/Debug/net6.0/MediatR.Contracts.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/bin/Debug/net6.0/MediatR.Contracts.xml
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Domain/obj/Debug/net6.0/DotNetTest.Domain.csproj.CopyComplete

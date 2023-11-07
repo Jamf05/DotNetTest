@@ -184,3 +184,6 @@
 /mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Api/obj/Debug/net6.0/DotNetTest.Api.pdb
 /mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Api/obj/Debug/net6.0/DotNetTest.Api.genruntimeconfig.cache
 /mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Api/obj/Debug/net6.0/ref/DotNetTest.Api.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Api/bin/Debug/net6.0/FluentValidation.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Api/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/mnt/F8D4CFA7D4CF668A/Workspace/RiderProjects/technical_test/DotNetTest.Core/DotNetTest.Api/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll

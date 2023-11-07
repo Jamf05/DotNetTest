@@ -1,0 +1,16 @@
+<data>
+    <command name="create-invoice">
+        <sql>
+            INSERT INTO TbIFacturas (
+            Id,
+            FechaEmisionFactura,
+            IdCliente,
+            NumeroFactura,
+            NumeroTotalArticulos,
+            SubTotalFactura,
+            TotalImpuesto,
+            TotalFactura
+            ) VALUES (@Id, @InvoiceDate, @ClientId, @InvoiceNumber, @TotalItems, @Subtotal, @TaxTotal, @Total)
+        </sql>
+    </command>
+</data>

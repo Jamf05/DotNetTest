@@ -1,3 +1,4 @@
+using DotNetTest.Api.Application.Commands;
 using DotNetTest.Api.Constants;
 using DotNetTest.Api.Queries;
 using DotNetTest.Domain.Exception;
@@ -91,6 +92,36 @@ public class InvoiceController : ApiControllerBase
         {
             var query = new InvoiceByTheLastQuery();
             var result = await _mediator.Send(query);
+            return await SuccessRequest(result);
+        }
+        catch (EntityNotFoundException e)
+        {
+            return await UnSuccessRequestNotFound(e.Message);
+        }
+        catch (ExceptionBase e)
+        {
+            return await UnSuccessRequest(e.Message);
+        }
+
+        catch (BadRequestException e)
+        {
+            return await UnSuccessRequest(e.Message);
+        }
+
+        catch (Exception e)
+        {
+            return await UnSuccessRequest(e.Message);
+        }
+    }
+
+    [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> CreateDetail(CreateInvoiceCommand command)
+    {
+        try
+        {
+            var result = await _mediator.Send(command);
             return await SuccessRequest(result);
         }
         catch (EntityNotFoundException e)

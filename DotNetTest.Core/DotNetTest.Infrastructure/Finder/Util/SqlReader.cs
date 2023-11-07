@@ -21,12 +21,43 @@ public static class SqlReader
                     }
                 }
             }
+
             if (queryFounded)
             {
                 var line = xmlReader.Value.ToLower();
                 if (line.Trim().Contains("select"))
                 {
-                    //_logger.Information(xmlReader.Value);
+                    return Task.FromResult(xmlReader.Value);
+                }
+            }
+        }
+
+        return Task.FromResult("");
+    }
+
+    public static Task<string> GetCommand(string command)
+    {
+        XmlTextReader xmlReader = new XmlTextReader(Directory.GetCurrentDirectory() + "/Configuration/commands.xml");
+        var commandFounded = false;
+        while (xmlReader.Read())
+        {
+            if (xmlReader.NodeType == XmlNodeType.Element)
+            {
+                while (xmlReader.MoveToNextAttribute())
+                {
+                    if (xmlReader.Value.Equals(command))
+                    {
+                        commandFounded = true;
+                        break;
+                    }
+                }
+            }
+
+            if (commandFounded)
+            {
+                var line = xmlReader.Value.ToLower();
+                if (line.Trim().Contains("insert") || line.Trim().Contains("update"))
+                {
                     return Task.FromResult(xmlReader.Value);
                 }
             }

@@ -7,6 +7,7 @@ using DotNetTest.Infrastructure.Finder;
 using DotNetTest.Infrastructure.Finder.Client;
 using DotNetTest.Infrastructure.Finder.Invoice;
 using DotNetTest.Infrastructure.Finder.Product;
+using DotNetTest.Infrastructure.Repository;
 
 namespace DotNetTest.Infrastructure.AutofactModules;
 
@@ -24,6 +25,10 @@ public class InfrastructureModule : Module
 
         builder.RegisterType<InvoiceFinder>()
             .As<IInvoiceFinder>()
+            .InstancePerLifetimeScope();
+        
+        builder.RegisterType<InvoiceRepository>()
+            .As<IInvoiceRepository>()
             .InstancePerLifetimeScope();
     }
 }
