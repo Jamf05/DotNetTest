@@ -5,5 +5,5 @@ namespace DotNetTest.Domain.AggregatesModel.ClientAggregate;
 
 public interface IClientFinder : IFinder<ClientDto, int>
 {
-    Task<IList<ClientDto>> GetList();
+    Task<IList<ClientDto>> GetListAsync();
 }

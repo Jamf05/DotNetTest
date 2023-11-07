@@ -8,11 +8,11 @@ namespace DotNetTest.Api.Controllers.V1;
 
 [ApiController]
 [Route(ApiConstants.ContextPathV1 + "[Controller]")]
-public class ClientController : ApiControllerBase
+public class InvoiceController : ApiControllerBase
 {
     private readonly IMediator _mediator;
 
-    public ClientController(IMediator mediator)
+    public InvoiceController(IMediator mediator)
     {
         _mediator = mediator;
     }
@@ -21,11 +21,11 @@ public class ClientController : ApiControllerBase
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetProductById(int clientId)
+    public async Task<IActionResult> GetInvoiceById(int invoiceId)
     {
         try
         {
-            var query = new ClientByIdQuery(clientId);
+            var query = new InvoiceByIdQuery(invoiceId);
             var result = await _mediator.Send(query);
             return await SuccessRequest(result);
         }
@@ -48,16 +48,48 @@ public class ClientController : ApiControllerBase
             return await UnSuccessRequest(e.Message);
         }
     }
-    
-    [Route("get-list")]
+
+    [Route("get-by-client-id")]
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetClientList()
+    public async Task<IActionResult> GetInvoiceByClientId(int clientId)
     {
         try
         {
-            var query = new ClientListQuery();
+            var query = new InvoiceByClientIdQuery(clientId);
+            var result = await _mediator.Send(query);
+            return await SuccessRequest(result);
+        }
+        catch (EntityNotFoundException e)
+        {
+            return await UnSuccessRequestNotFound(e.Message);
+        }
+        catch (ExceptionBase e)
+        {
+            return await UnSuccessRequest(e.Message);
+        }
+
+        catch (BadRequestException e)
+        {
+            return await UnSuccessRequest(e.Message);
+        }
+
+        catch (Exception e)
+        {
+            return await UnSuccessRequest(e.Message);
+        }
+    }
+
+    [Route("get-by-the-last")]
+    [HttpGet]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> GetInvoiceByTheLast()
+    {
+        try
+        {
+            var query = new InvoiceByTheLastQuery();
             var result = await _mediator.Send(query);
             return await SuccessRequest(result);
         }

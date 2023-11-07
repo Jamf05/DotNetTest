@@ -38,10 +38,9 @@ public class ProductFinder : IProductFinder
         return currentProduct;
     }
 
-    public async Task<IList<ProductDto>> GetList()
+    public async Task<IList<ProductDto>> GetListAsync()
     {
         var sql = SqlReader.GetQuery("get-product-list").Result;
-        var dictionary = new Dictionary<string, object>();
 
         var product = await _connection.QueryAsync<ProductDto>(sql);
 

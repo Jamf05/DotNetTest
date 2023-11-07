@@ -43,12 +43,104 @@
     <query name="get-client-list">
         <sql>
             SELECT
-            p.Id as Id,
-            p.NombreProducto as ProductName,
-            p.ImagenProducto as ImageProduct,
-            p.PrecioUnitario as UnitPrice,
-            p.ext as Ext
-            FROM CatProductos p;
+            c.id as Id,
+            c.RazonSocial as BusinessName,
+            c.IdTipoCliente as ClientTypeId,
+            c.FechaCreacion as CreationDate,
+            c.RFC as Rfc,
+            ct.ID as Id,
+            ct.TipoCliente as Type
+            FROM TbIClientes c
+            JOIN CatTipoCliente ct ON c.IdTipoCliente = ct.ID
+        </sql>
+    </query>
+
+    <query name="get-invoice-by-id">
+        <sql>
+            SELECT
+            f.Id as Id,
+            f.FechaEmisionFactura as InvoiceDate,
+            f.IdCliente as ClientId,
+            f.NumeroFactura as InvoiceNumber,
+            f.NumeroTotalArticulos as TotalItems,
+            f.SubTotalFactura as Subtotal,
+            f.TotalImpuesto as TaxTotal,
+            f.TotalFactura as Total,
+            c.id as Id,
+            c.RazonSocial as BusinessName,
+            c.IdTipoCliente as ClientTypeId,
+            c.FechaCreacion as CreationDate,
+            c.RFC as Rfc
+            FROM TbIFacturas f
+            JOIN TbIClientes c ON f.IdCliente = c.id
+            WHERE f.Id = @InvoiceId
+        </sql>
+    </query>
+
+    <query name="get-the-last-invoice">
+        <sql>
+            SELECT
+            f.Id as Id,
+            f.FechaEmisionFactura as InvoiceDate,
+            f.IdCliente as ClientId,
+            f.NumeroFactura as InvoiceNumber,
+            f.NumeroTotalArticulos as TotalItems,
+            f.SubTotalFactura as Subtotal,
+            f.TotalImpuesto as TaxTotal,
+            f.TotalFactura as Total,
+            c.id as Id,
+            c.RazonSocial as BusinessName,
+            c.IdTipoCliente as ClientTypeId,
+            c.FechaCreacion as CreationDate,
+            c.RFC as Rfc
+            FROM TbIFacturas f
+            JOIN TbIClientes c ON f.IdCliente = c.id
+            WHERE f.NumeroTotalArticulos = 0
+            AND f.SubTotalFactura = 0
+            AND f.TotalFactura = 0
+        </sql>
+    </query>
+
+    <query name="get-invoice-list">
+        <sql>
+            SELECT
+            f.Id as Id,
+            f.FechaEmisionFactura as InvoiceDate,
+            f.IdCliente as ClientId,
+            f.NumeroFactura as InvoiceNumber,
+            f.NumeroTotalArticulos as TotalItems,
+            f.SubTotalFactura as Subtotal,
+            f.TotalImpuesto as TaxTotal,
+            f.TotalFactura as Total,
+            c.id as Id,
+            c.RazonSocial as BusinessName,
+            c.IdTipoCliente as ClientTypeId,
+            c.FechaCreacion as CreationDate,
+            c.RFC as Rfc
+            FROM TbIFacturas f
+            JOIN TbIClientes c ON f.IdCliente = c.id
+        </sql>
+    </query>
+
+    <query name="get-invoice-by-client-id">
+        <sql>
+            SELECT
+            f.Id as Id,
+            f.FechaEmisionFactura as InvoiceDate,
+            f.IdCliente as ClientId,
+            f.NumeroFactura as InvoiceNumber,
+            f.NumeroTotalArticulos as TotalItems,
+            f.SubTotalFactura as Subtotal,
+            f.TotalImpuesto as TaxTotal,
+            f.TotalFactura as Total,
+            c.id as Id,
+            c.RazonSocial as BusinessName,
+            c.IdTipoCliente as ClientTypeId,
+            c.FechaCreacion as CreationDate,
+            c.RFC as Rfc
+            FROM TbIFacturas f
+            JOIN TbIClientes c ON f.IdCliente = c.id
+            WHERE c.Id = @ClientId
         </sql>
     </query>
 </data>

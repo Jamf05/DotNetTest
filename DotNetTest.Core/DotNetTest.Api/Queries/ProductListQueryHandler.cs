@@ -15,6 +15,6 @@ public class ProductListQueryHandler : IRequestHandler<ProductListQuery, IList<P
 
     public async Task<IList<ProductDto>> Handle(ProductListQuery request, CancellationToken cancellationToken)
     {
-        return await _finder.GetList();
+        return await _finder.GetListAsync();
     }
 }

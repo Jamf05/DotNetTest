@@ -33,7 +33,7 @@ public class ClientFinder : IClientFinder
         }, parameters, splitOn: "Id, Id");
 
         var clientListDto = client.ToList();
-        if (client == null || !clientListDto.Any()) throw new BadRequestException("Product does not exist.");
+        if (client == null || !clientListDto.Any()) throw new BadRequestException("Client does not exist.");
 
         var currentClient = clientListDto.FirstOrDefault();
 
@@ -42,8 +42,21 @@ public class ClientFinder : IClientFinder
         return currentClient;
     }
 
-    public Task<IList<ClientDto>> GetList()
+    public async Task<IList<ClientDto>> GetListAsync()
     {
-        throw new NotImplementedException();
+        var sql = SqlReader.GetQuery("get-client-list").Result;
+        var dictionary = new Dictionary<string, object>();
+
+        var parameters = new DynamicParameters(dictionary);
+
+        var client = await _connection.QueryAsync<ClientDto, ClientTypeDto, ClientDto>(sql, (client, clientType) =>
+        {
+            client.ClientType = clientType;
+            return client;
+        }, parameters, splitOn: "Id, Id");
+
+        var clientListDto = client.ToList();
+
+        return clientListDto;
     }
 }

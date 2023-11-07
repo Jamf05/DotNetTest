@@ -5,5 +5,5 @@ namespace DotNetTest.Domain.AggregatesModel.ProductAggregate;
 
 public interface IProductFinder : IFinder<ProductDto, int>
 {
-    Task<IList<ProductDto>> GetList();
+    Task<IList<ProductDto>> GetListAsync();
 }
