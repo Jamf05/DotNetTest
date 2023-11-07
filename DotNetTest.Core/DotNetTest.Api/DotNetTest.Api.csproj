@@ -22,6 +22,10 @@
       <ProjectReference Include="..\DotNetTest.Infrastructure\DotNetTest.Infrastructure.csproj" />
 
 
+    <ItemGroup>
+      <Folder Include="Application\Commands\" />
+    </ItemGroup>
+
     </ItemGroup>
 
 
