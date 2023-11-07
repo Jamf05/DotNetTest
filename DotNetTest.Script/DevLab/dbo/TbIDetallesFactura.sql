@@ -12,7 +12,7 @@ create table TbIDetallesFactura
     CantidadDeProducto     int            not null,
     PrecioUnitarioProducto decimal(18, 2) not null,
     SubtotalProducto       decimal(18, 2) not null,
-    Notas                  varchar(200)   not null
+    Notas                  varchar(200)
 )
 go
 

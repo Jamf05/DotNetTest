@@ -26,6 +26,11 @@
               <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIDetallesFactura.sql" />
               <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIFacturas.sql" />
               <option value="file://$PROJECT_DIR$/../DotNetTest.Script" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/CatProductos.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/CatTipoCliente.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIClientes.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIDetallesFactura.sql" />
+              <option value="file://$PROJECT_DIR$/../DotNetTest.Script/DevLab/dbo/TbIFacturas.sql" />
             </array>
           </option>
           <option name="outPath" value="$PROJECT_DIR$/../DotNetTest.Script" />
