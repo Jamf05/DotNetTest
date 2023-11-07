@@ -13,4 +13,17 @@
             ) VALUES (@Id, @InvoiceDate, @ClientId, @InvoiceNumber, @TotalItems, @Subtotal, @TaxTotal, @Total)
         </sql>
     </command>
+    <command name="create-invoice-detail">
+        <sql>
+            INSERT INTO TbIDetallesFactura (
+            Id,
+            IdFactura,
+            IdProducto,
+            CantidadDeProducto,
+            PrecioUnitarioProducto,
+            SubtotalProducto,
+            Notas
+            ) VALUES (@Id, @InvoiceId, @ProductId, @Quantity, @UnitPrice, @Subtotal, @Notes)
+        </sql>
+    </command>
 </data>

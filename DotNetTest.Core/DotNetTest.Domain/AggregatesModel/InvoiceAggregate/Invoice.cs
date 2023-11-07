@@ -1,4 +1,3 @@
-using DotNetTest.Domain.AggregatesModel.ClientAggregate;
 using DotNetTest.Domain.SeedWork;
 
 namespace DotNetTest.Domain.AggregatesModel.InvoiceAggregate;
@@ -13,5 +12,4 @@ public class Invoice : IEntity
     public decimal Subtotal { get; set; }
     public decimal TaxTotal { get; set; }
     public decimal Total { get; set; }
-    public Client Client { get; set; } = null!;
 }

@@ -14,29 +14,57 @@ public class InvoiceRepository : IInvoiceRepository
         _connection = connection;
     }
 
-    public async Task<bool> Create(Invoice invoice)
+    public async Task<bool> Create(Invoice invoice, IList<InvoiceDetail> details)
     {
-        
-        
-        var sql = SqlReader.GetCommand("create-invoice").Result;
-        var dictionary = new Dictionary<string, object>()
+        _connection.Open();
+        var transaction = _connection.BeginTransaction();
+        try
         {
-            { "@Id", invoice.Id },
-            { "@InvoiceDate", invoice.InvoiceDate },
-            { "@ClientId", invoice.ClientId },
-            { "@InvoiceNumber", invoice.InvoiceNumber },
-            { "@TotalItems", invoice.TotalItems },
-            { "@Subtotal", invoice.Subtotal },
-            { "@TaxTotal", invoice.TaxTotal },
-            { "@Total", invoice.Total }
-        };
+            var sql = SqlReader.GetCommand("create-invoice").Result;
+            var dictionary = new Dictionary<string, object>()
+            {
+                { "@Id", invoice.Id },
+                { "@InvoiceDate", invoice.InvoiceDate },
+                { "@ClientId", invoice.ClientId },
+                { "@InvoiceNumber", invoice.InvoiceNumber },
+                { "@TotalItems", invoice.TotalItems },
+                { "@Subtotal", invoice.Subtotal },
+                { "@TaxTotal", invoice.TaxTotal },
+                { "@Total", invoice.Total }
+            };
 
-        var parameters = new DynamicParameters(dictionary);
-        
-       
+            var parameters = new DynamicParameters(dictionary);
 
-        await _connection.ExecuteAsync(sql, parameters);
+            await _connection.ExecuteAsync(sql, parameters, transaction);
 
-        return true;
+            foreach (var detail in details)
+            {
+                var sqlDetail = SqlReader.GetCommand("create-invoice-detail").Result;
+                var dictionaryDetail = new Dictionary<string, object>()
+                {
+                    { "@Id", detail.Id },
+                    { "@InvoiceId", detail.InvoiceId },
+                    { "@ProductId", detail.ProductId },
+                    { "@Quantity", detail.Quantity },
+                    { "@UnitPrice", detail.UnitPrice },
+                    { "@Subtotal", detail.Subtotal },
+                    { "@Notes", detail.Notes },
+                };
+
+                var parametersDetail = new DynamicParameters(dictionaryDetail);
+
+                await _connection.ExecuteAsync(sqlDetail, parametersDetail, transaction);
+            }
+
+            transaction.Commit();
+            _connection.Close();
+            return true;
+        }
+        catch (Exception e)
+        {
+            transaction.Rollback();
+            _connection.Close();
+            throw;
+        }
     }
 }

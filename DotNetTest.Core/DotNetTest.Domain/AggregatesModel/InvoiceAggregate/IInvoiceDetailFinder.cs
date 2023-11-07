@@ -3,7 +3,7 @@ using DotNetTest.Domain.SeedWork;
 
 namespace DotNetTest.Domain.AggregatesModel.InvoiceAggregate;
 
-public interface IInvoiceRepository : IRepository
+public interface IInvoiceDetailFinder : IFinder<InvoiceDetailDto, int>
 {
-    Task<bool> Create(Invoice invoice, IList<InvoiceDetail> details);
+    public Task<IList<InvoiceDetailDto>> GetListAsync();
 }

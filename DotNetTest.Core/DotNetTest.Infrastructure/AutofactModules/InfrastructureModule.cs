@@ -26,7 +26,11 @@ public class InfrastructureModule : Module
         builder.RegisterType<InvoiceFinder>()
             .As<IInvoiceFinder>()
             .InstancePerLifetimeScope();
-        
+
+        builder.RegisterType<InvoiceDetailFinder>()
+            .As<IInvoiceDetailFinder>()
+            .InstancePerLifetimeScope();
+
         builder.RegisterType<InvoiceRepository>()
             .As<IInvoiceRepository>()
             .InstancePerLifetimeScope();

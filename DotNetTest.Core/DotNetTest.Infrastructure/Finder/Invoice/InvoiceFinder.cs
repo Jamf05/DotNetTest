@@ -74,7 +74,11 @@ public class InvoiceFinder : IInvoiceFinder
     {
         var sql = SqlReader.GetQuery("get-invoice-list").Result;
 
-        var invoice = await _connection.QueryAsync<InvoiceDto>(sql);
+        var invoice = await _connection.QueryAsync<InvoiceDto, ClientDto, InvoiceDto>(sql, (invoice, client) =>
+        {
+            invoice.Client = client;
+            return invoice;
+        }, splitOn: "Id, Id");
 
         var invoiceListDto = invoice.ToList();
 

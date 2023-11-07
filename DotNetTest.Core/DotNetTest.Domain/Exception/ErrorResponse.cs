@@ -1,3 +1,5 @@
+using DotNetTest.Domain.Exception;
+
 namespace Treebu.Ledger.Domain.Exception;
 
 public class ErrorResponse

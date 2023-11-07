@@ -1,3 +1,5 @@
+using DotNetTest.Domain.AggregatesModel.ClientAggregate;
+using DotNetTest.Domain.Models;
 using FluentValidation;
 using MediatR;
 
@@ -8,17 +10,18 @@ public class CreateInvoiceCommand : IRequest<bool>
     public DateTime InvoiceDate = DateTime.Now;
     public int ClientId { get; set; }
     public int InvoiceNumber { get; set; }
-    public int TotalItems { get; } = 0;
-    public decimal Subtotal { get; } = 0.00m;
-    public decimal TaxTotal { get; } = 0.00m;
-    public decimal Total { get; } = 0.00m;
+    public IList<InvoiceCreationDto> DetailsList { get; set; } = null!;
     
+    public CreateInvoiceCommand() {}
+
     public class CreateInvoiceCommandValidator : AbstractValidator<CreateInvoiceCommand>
     {
         public CreateInvoiceCommandValidator()
         {
             RuleFor(x => x.ClientId).NotEmpty();
             RuleFor(x => x.InvoiceNumber).NotEmpty();
+            RuleFor(x => x.DetailsList).NotEmpty();
+            RuleForEach(x => x.DetailsList).Must(x => x.Quantity > 0);
         }
     }
 }

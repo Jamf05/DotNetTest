@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace Treebu.Ledger.Domain.Exception;
+namespace DotNetTest.Domain.Exception;
 
 public class ErrorDetail
 {
